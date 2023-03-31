@@ -1,0 +1,172 @@
+.container {
+  display: grid;
+  margin: 1% 0;
+  align-items: start;
+}
+
+.title {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.btn-primary {
+  margin: 0 1% 0 0;
+}
+
+.top_blue_button {
+  display: grid;
+  grid-template-columns: 10% 83% auto;
+  justify-items: start;
+}
+
+.filter_button {
+  display: grid;
+  width: 80px;
+  grid-template-columns: 80% auto;
+  align-items: start;
+  cursor: pointer;
+}
+
+.filter_icon {
+  width: 15px;
+  margin: 0 1%;
+}
+
+.filter_text {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.filter {
+  background-color: rgb(233 247 255);
+  border-radius: 20px;
+  padding: 35px;
+  margin: 20px auto;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  top: 105px;
+  /* left: 80px; */
+  width: 68%;
+  box-shadow: 0px 5px 5px 2px rgb(239, 239, 240);
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  width: 25px;
+}
+
+.title_param {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.first {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.checked {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.from_to {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.gray_text {
+  margin: 0;
+  padding: 0;
+  color: gray;
+}
+
+.second {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  margin: 3% 0;
+}
+
+.third {
+  display: grid;
+  grid-template-columns: 25% 25%;
+}
+
+.select {
+  width: 180px;
+  height: 40px;
+  border-color: #8080804a;
+}
+
+.box {
+  border: 1px solid #8080804a;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.card {
+  margin: 5% 5% 5% 0;
+  padding: 15px;
+  /* width: 40%; */
+  height: 20%;
+}
+
+.card:hover {
+  border: 1px solid #0d6efd;
+}
+
+.text_about {
+}
+
+.number_donor {
+  padding: 3% 0 0 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.specifications {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.specification {
+  margin: 5% 0;
+}
+
+.specification_title {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+
+.specification {
+}
+
+.specification_params {
+  font-family: sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.no_filter{
+  display: grid;
+  text-align: center;
+}
+
+.filter_0 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}

@@ -1,0 +1,144 @@
+    <!-- ko if: filter() -->
+    <div class="filter">
+      <img src="icons8-close-48.png" alt="" class="close">
+      <div class="first">
+        <div class="from_to">
+          <p class="title_param">Рост</p>
+          <div class="from">
+            <p class="text_gray"></p>
+            <input type="text">
+          </div>
+          <div class="to">
+            <p class="text_gray"></p>
+            <input type="text">
+          </div>
+        </div>
+        <div class="from_to">
+          <p class="title_param">Вес</p>
+          <div class="from">
+            <p class="text_gray"></p>
+            <input type="text">
+          </div>
+          <div class="to">
+            <p class="text_gray"></p>
+            <input type="text">
+          </div>
+        </div>
+        <div class="checkup_blood">
+          <p class="title_param">Группа крови</p>
+          <div class="checked">
+            <!-- ko foreach: blood_types -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault" data-bind="text: $data"></label>
+            </div>
+            <!-- /ko -->
+          </div>
+        </div>
+        <div class="switches">
+          <p class="title_param">Резус фактор</p>
+          <div class="switch">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+              <label class="form-check-label" for="flexSwitchCheckDefault">Положительный</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+              <label class="form-check-label" for="flexSwitchCheckDefault">Отрицательный</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div>
+          <p class="title_param">Цвет глаз</p>
+          <div class="checkup_eye">
+            <div class="checked">
+              <!-- ko foreach: eye_colors -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" data-bind="text: $data"></label>
+              </div>
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="checkup_hair">
+            <p class="title_param">Цвет волос</p>
+            <div class="checked">
+              <!-- ko foreach: hair_colors -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" data-bind="text: $data"></label>
+              </div>
+              <!-- /ko -->
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="title_param">Цвет кожи</p>
+          <div class="checkup_skin">
+            <div class="checked">
+              <!-- ko foreach: skin_colors -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" data-bind="text: $data"></label>
+              </div>
+              <!-- /ko -->
+            </div>
+          </div>
+          <div class="third">
+            <div class="nationality">
+              <p class="title_param">Национальность</p>
+              <select class="months">
+                <option selected>Не выбрано</option>
+                <!-- ko foreach: nationalities -->
+                <option class="month" data-bind="attr: {value: $index}, text: $data"></option>
+                <!-- /ko -->
+              </select>
+            </div>
+            <div class="zodiac_sign">
+              <p class="title_param">Знак зодиака</p>
+              <select class="months">
+                <option selected>Не выбрано</option>
+                <!-- ko foreach: zodiac_signs -->
+                <option class="month" data-bind="attr: {value: $index}, text: $data"></option>
+                <!-- /ko -->
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /ko -->
+
+
+
+    // let select_gender = ""
+// let skin_colors = ['Светлая', 'Смуглая']
+// let hair_colors = ['Русые', 'Темные', 'Светлые', 'Рыжие']
+// let eye_colors = ['Голубые', 'Зеленые', 'Серые', 'Карие', 'Черные']
+// let nationalities = ['Русский', 'Башкир', 'Татарин', 'Метис']
+// let zodiac_signs = ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы']
+// let blood_types = ['I', 'II', 'III', 'IV']
+// let rh_factors = ['+', '-']
+// let genders = ['men', 'women']
+
+// ko.track(select_gender)
+// ko.track(skin_colors)
+// ko.track(hair_colors)
+// ko.track(eye_colors)
+// ko.track(nationalities)
+// ko.track(zodiac_signs)
+// ko.track(rh_factors)
+// ko.track(rh_factors)
+
+// let skin_colors = ko.observable(['Светлая', 'Смуглая'])
+// let hair_colors = ko.observable(['Русые', 'Темные', 'Светлые', 'Рыжие'])
+// let eye_colors = ko.observable(['Голубые', 'Зеленые', 'Серые', 'Карие', 'Черные'])
+// let nationalities = ko.observable(['Русский', 'Башкир', 'Татарин', 'Метис'])
+// let zodiac_signs = ko.observable(['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы'])
+// let blood_types = ko.observable(['I', 'II', 'III', 'IV'])
+// let rh_factors = ko.observable(['+', '-'])
+// let genders = ko.observable(['men', 'women'])
