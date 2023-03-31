@@ -47,7 +47,7 @@
   position: absolute;
   overflow: hidden;
   z-index: 2;
-  top: 105px;
+  top: 10%;
   /* left: 80px; */
   width: 68%;
   box-shadow: 0px 5px 5px 2px rgb(239, 239, 240);
@@ -112,6 +112,43 @@
 .cards {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+}
+
+@media (max-width: 500px) {
+  .container{
+    margin: 1% 0;
+  }
+  .top_blue_button {
+    display: grid;
+    grid-template-columns: 32% 41% auto;
+  }
+
+  .cards{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filter{
+    width: 90%;
+    margin: 8px auto;
+    top: 12%;
+  }
+
+  .first{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .second{
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 20px;
+  }
+
+  .third{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .title_param {
+    margin-top: 20px;
+  }
 }
 
 .card {
