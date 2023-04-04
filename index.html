@@ -38,7 +38,9 @@
     </div>
     <!-- ko if: filt() -->
     <div class="filter">
-      <img src="icons8-close-48.png" alt="" class="close" data-bind="click: function(){filt(false)}">
+      <div class="close">
+        <div></div>
+        <img src="icons8-close-48.png" alt="" style="width: 25px;" data-bind="click: function(){filt(false)}"></div>
       <div class="first">
         <div class="height">
           <p class="title_param">Рост</p>
@@ -157,10 +159,12 @@
           </select>
         </div>
       </div>
-      <button type="button" class="btn btn-primary do" style="margin-top: 3%;" onclick="performFilters()">Применить
-        фильтр</button>
-      <button type="button" class="btn btn-outline-primary" style="margin-top: 3%;" onclick="clean_filter()">Очистить
-        фильтр</button>
+      <div class="filtered_button">
+        <button type="button" class="btn btn-primary filtered" onclick="performFilters()">Применить
+          фильтр</button>
+        <button type="button" class="btn btn-outline-primary" onclick="clean_filter()">Очистить
+          фильтр</button>
+      </div>
     </div>
     <!-- /ko -->
 
