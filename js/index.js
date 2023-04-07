@@ -1,9 +1,9 @@
 class Donor {
   constructor(params) {
-    this.number = params.number;
-    this.zodiac_sign = params.zodiac_sign;
-    this.height = params.height;
-    this.weight = params.weight;
+    this.number = params.number
+    this.zodiac_sign = params.zodiac_sign
+    this.height = params.height
+    this.weight = params.weight
     this.skin_color = params.skin_color
     this.blood_type = params.blood_type
     this.hair_color = params.hair_color
@@ -11,6 +11,7 @@ class Donor {
     this.eye_color = params.eye_color
     this.rhesus = params.rhesus
     this.gender = params.gender
+    this.photo = params.photo
   }
 }
 
@@ -113,6 +114,8 @@ function check(checkboxElem) {
 }
 
 const fields = {
+  photo_men: ['/donor_photos/men/1.jpeg', '/donor_photos/men/12.jpeg', '/donor_photos/men/17.jpeg', '/donor_photos/men/2.jpg', '/donor_photos/men/3.jpg', '/donor_photos/men/4.jpg', '/donor_photos/men/5.jpg', '/donor_photos/men/6.jpg', '/donor_photos/men/7.jpg', '/donor_photos/men/8.jpg', '/donor_photos/men/9.jpg', '/donor_photos/men/10.jpg', '/donor_photos/men/11.jpg', '/donor_photos/men/13.jpg', '/donor_photos/men/15.jpg', '/donor_photos/men/16.jpg', '/donor_photos/men/18.jpg', '/donor_photos/men/19.jpg', '/donor_photos/men/20.jpg', '/donor_photos/men/21.jpg', '/donor_photos/men/22.jpg', '/donor_photos/men/23.jpg', '/donor_photos/men/24.jpg', '/donor_photos/men/25.jpg', '/donor_photos/men/26.jpg', '/donor_photos/men/27.jpg', '/donor_photos/men/28.jpg', '/donor_photos/men/29.jpg', '/donor_photos/men/30.jpg', '/donor_photos/men/31.jpg', '/donor_photos/men/32.jpg', '/donor_photos/men/33.jpg',],
+  photo_women: ['/donor_photos/women/1.jpg', '/donor_photos/women/2.jpg', '/donor_photos/women/3.jpg','/donor_photos/women/4.jpg', '/donor_photos/women/5.jpg', '/donor_photos/women/6.png', '/donor_photos/women/7.jpg', '/donor_photos/women/8.jpg','/donor_photos/women/9.jpg','/donor_photos/women/10.jpg','/donor_photos/women/12.jpg','/donor_photos/women/13.jpg','/donor_photos/women/14.jpg','/donor_photos/women/15.jpg','/donor_photos/women/16.jpg','/donor_photos/women/17.jpg','/donor_photos/women/18.jpg','/donor_photos/women/19.jpg','/donor_photos/women/20.jpg', ,'/donor_photos/women/21.jpg','/donor_photos/women/22.jpg','/donor_photos/women/23.jpg','/donor_photos/women/24.jpg', ,'/donor_photos/women/25.jpg','/donor_photos/women/26.jpg','/donor_photos/women/27.jpg','/donor_photos/women/28.jpg', ,'/donor_photos/women/29.jpg','/donor_photos/women/30.jpg','/donor_photos/women/31.jpg','/donor_photos/women/32.jpg', ,'/donor_photos/women/33.jpg'],
   skin_colors: ['Светлая', 'Смуглая'],
   hair_colors: ['Русые', 'Темные', 'Светлые', 'Рыжие'],
   eye_colors: ['Голубые', 'Зеленые', 'Серые', 'Карие', 'Черные'],
@@ -135,6 +138,10 @@ function generateDonnors(n) {
     const blood_type = fields.blood_types[getRandomInt(0, fields.blood_types.length)]
     const rhesus = fields.rh_factors[getRandomInt(0, fields.rh_factors.length)]
     const gender = fields.genders[getRandomInt(0, fields.genders.length)]
+    // const end_men = getRandomInt(0, fields.photo_men.length)
+    // const end_women = getRandomInt(0, fields.photo_women.length)
+    const photo = (gender === 'women')? fields.photo_women.shift() : fields.photo_men.shift()
+
 
     let donor = new Donor({
       number: getRandomInt(100000, 200000),
@@ -148,6 +155,7 @@ function generateDonnors(n) {
       skin_color: skin_color,
       rhesus: rhesus,
       gender: gender,
+      photo: photo,
     })
     result.push(donor)
   }
@@ -190,9 +198,9 @@ function performFilters() {
   console.log(filteredDonnors());
 }
 
-
 function clean_filter() {
-  filteredDonnors(donnors.splice(0));
+  let all_donnors = donnors.map((x) => x)
+  filteredDonnors(all_donnors.splice(0));
   filt(false)
 }
 

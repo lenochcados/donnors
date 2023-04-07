@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <title>Баловство</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,14 +33,15 @@
       <!-- <button type="button" class="btn btn-primary">Эмбрионы</button> -->
       <div class="filter_button" data-bind="click: function(){filt(true)}">
         <p class="filter_text">Фильтры</p>
-        <img src="funnel.png" alt="Фильтр" class="filter_icon">
+        <img src="./css/funnel.png" alt="Фильтр" class="filter_icon">
       </div>
     </div>
     <!-- ko if: filt() -->
     <div class="filter">
       <div class="close">
         <div></div>
-        <img src="icons8-close-48.png" alt="" style="width: 25px;" data-bind="click: function(){filt(false)}"></div>
+        <img src="./css/icons8-close-48.png" alt="" style="width: 25px;" data-bind="click: function(){filt(false)}">
+      </div>
       <div class="first">
         <div class="height">
           <p class="title_param">Рост</p>
@@ -172,7 +173,9 @@
       <!-- ko foreach: filteredDonnors -->
       <!-- ko if: $data.gender == select_gender() || select_gender() === ''-->
       <div class="card" 0data-bind="style: {margin: $index()===3 ?  '5% 0 5% 0': '5% 5% 5% 0'}">
-        <img src="rebenku_7_let.jpg" alt="donor1">
+        <div class="donor_photo">
+          <img class="photo" data-bind="attr:{src: $data.photo}">
+        </div>
         <div class="text_about">
           <p class="number_donor" data-bind="text: 'Донор '+ $data.number"></p>
           <p class="specification_title" data-bind="text: $data.zodiac_sign"></p>
@@ -213,7 +216,7 @@
     </div>
     <!-- /ko -->
   </div>
-  <script src="index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

@@ -99,14 +99,14 @@
   border-color: #8080804a;
 }
 
-.filtered_button{
+.filtered_button {
   display: grid;
   grid-template-columns: 18% 15%;
   margin-top: 3%;
 }
 
-.filtered{
-  margin-right: 10%; 
+.filtered {
+  margin-right: 10%;
 }
 
 .box {
@@ -119,7 +119,7 @@
 }
 
 @media (max-width: 500px) {
-  .container{
+  .container {
     margin: 1% 0;
   }
   .top_blue_button {
@@ -127,26 +127,26 @@
     grid-template-columns: 32% 41% auto;
   }
 
-  .cards{
+  .cards {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .filter{
+  .filter {
     width: 100%;
     border-radius: 0;
     margin: 8px auto;
   }
 
-  .first{
+  .first {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .second{
+  .second {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 20px;
   }
 
-  .third{
+  .third {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -154,12 +154,12 @@
     margin-top: 20px;
   }
 
-  .filtered_button{
+  .filtered_button {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 10%;
   }
 
-  .filtered{
+  .filtered {
     margin-right: 0;
     margin-bottom: 5%;
   }
@@ -174,6 +174,16 @@
 
 .card:hover {
   border: 1px solid #0d6efd;
+}
+
+.donor_photo {
+  max-height: 190px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.photo{
+  width: 100%;
 }
 
 .text_about {
@@ -211,7 +221,7 @@
   margin: 0;
 }
 
-.no_filter{
+.no_filter {
   display: grid;
   text-align: center;
 }
